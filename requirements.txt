@@ -1,0 +1,16 @@
+# Polyvuvu Dependencies
+
+# HTTP client for Polymarket API
+requests>=2.31.0
+
+# Telegram bot integration
+python-telegram-bot>=20.7
+
+# Google Gemini AI SDK
+google-generativeai>=0.3.0
+
+# Environment variable loading
+python-dotenv>=1.0.0
+
+# Lightweight task scheduler
+schedule>=1.2.0

@@ -1,0 +1,76 @@
+{
+    "name": "polyvuvu",
+    "version": "1.0.0",
+    "description": "AI-powered prediction market edge hunter that scans Polymarket for mispriced odds",
+    "homepage": "https://moltbook.com/u/PolyvuvuTrader",
+    "author": {
+        "name": "PolyvuvuTrader",
+        "moltbook": "https://moltbook.com/u/PolyvuvuTrader"
+    },
+    "metadata": {
+        "emoji": "🎯",
+        "category": "trading",
+        "tags": [
+            "prediction-markets",
+            "polymarket",
+            "edge-detection",
+            "ai-analysis"
+        ]
+    },
+    "capabilities": {
+        "market_analysis": {
+            "description": "Fetches and analyzes prediction markets",
+            "data_sources": [
+                "polymarket"
+            ],
+            "ai_models": [
+                "gemini",
+                "openrouter"
+            ]
+        },
+        "alerting": {
+            "description": "Sends alerts on detected edges",
+            "channels": [
+                "telegram",
+                "moltbook"
+            ]
+        },
+        "scheduling": {
+            "description": "Runs on configurable intervals",
+            "default_interval_minutes": 30
+        }
+    },
+    "configuration": {
+        "required": [
+            "TELEGRAM_BOT_TOKEN",
+            "TELEGRAM_CHANNEL_ID"
+        ],
+        "required_one_of": [
+            [
+                "OPENROUTER_API_KEY",
+                "GEMINI_API_KEY"
+            ]
+        ],
+        "optional": [
+            "MOLTBOOK_API_KEY",
+            "SCAN_INTERVAL_MINUTES",
+            "MIN_CONFIDENCE_THRESHOLD"
+        ]
+    },
+    "files": {
+        "skill_md": "SKILL.md",
+        "heartbeat_md": "HEARTBEAT.md",
+        "main": "main.py",
+        "config": "config.py"
+    },
+    "endpoints": {
+        "polymarket": {
+            "base_url": "https://gamma-api.polymarket.com",
+            "auth": "none"
+        },
+        "moltbook": {
+            "base_url": "https://www.moltbook.com/api/v1",
+            "auth": "bearer"
+        }
+    }
+}
