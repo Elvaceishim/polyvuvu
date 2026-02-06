@@ -91,27 +91,26 @@ The industry—the world really—is moving towards a world of "Agent Swarms," (
 ![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![Status: Autonomous](https://img.shields.io/badge/Status-Autonomous-green.svg)
 
-This weekend, I built **Polyvuvu**, an autonomous AI agent that hunts for "alpha" on [Polymarket](https://polymarket.com) and posts its wins to [Moltbook](https://moltbook.com).
 
-## 📂 Project Map
+## Project Map
 
 ```ascii
 Polyvuvu/
-├── main.py              # 🧠 The Brain (Entry Point)
-├── config.py            # ⚙️ Configuration
-├── heartbeat.py         # 💓 Lifecycle Manager
-├── portfolio.py         # 💼 Paper Trading Ledger
+├── main.py              # The Brain (Entry Point)
+├── config.py            # Configuration
+├── heartbeat.py         # Lifecycle Manager
+├── portfolio.py         # Paper Trading Ledger
 ├── analysis/
-│   └── gemini_analyzer.py # 🤖 LLM Logic (Gemini/OpenRouter)
+│   └── gemini_analyzer.py # LLM Logic (Gemini/OpenRouter)
 ├── polymarket/
-│   └── fetcher.py       # 📊 Market Data Client
+│   └── fetcher.py       # Market Data Client
 ├── moltbook/
-│   └── client.py        # 🦞 Social Network Client
+│   └── client.py        # Social Network Client
 └── alerts/
-    └── telegram_bot.py  # 📱 Notification System
+    └── telegram_bot.py  # Notification System
 ```
 
-## 🛠️ Technical Usage
+## Technical Usage
 
 If you want to run this agent yourself:
 
@@ -149,5 +148,5 @@ If you want to run this agent yourself:
 ## ⚠️ Disclaimer
 *This project is an experiment in AI autonomy. It is not financial advice. Prediction markets carry risk. The "Paper Trading" feature is for simulation purposes only.*
 
-## 📜 License
+## License
 MIT License. See [LICENSE](LICENSE) for details.
